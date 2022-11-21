@@ -139,6 +139,7 @@ dmypy.json
 
 .vscode/
 *.code-workspace
+yatube/static/css/bootstrap.min.css
 
 # Local History for Visual Studio Code
 .history/

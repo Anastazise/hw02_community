@@ -15,8 +15,7 @@
       Дата публикации: {{ post.pub_date|date:"d E Y" }}
     </li>
   </ul>
-  <p>{{ post.text }}</p>    
-  {% comment %} <a href="/group/{{ post.group.slug }}">все записи группы</a> {% endcomment %}
+  <p>{{ post.text }}</p>
   {% if post.group %}   
     <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
   {% endif %} 
