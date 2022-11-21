@@ -16,11 +16,13 @@ class Post(models.Model):
         blank=True,
         null=True, on_delete=models.SET_NULL,
         verbose_name='Сообщество')
+
+
     class Meta:
         ordering = ("-pub_date",)
-    
-    def __str__(self) -> str: 
-        return self.text 
+
+    def __str__(self) -> str:
+        return self.text
 
 
 class Group(models.Model):

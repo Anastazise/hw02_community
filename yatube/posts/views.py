@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 
 POSTS_PER_PAGE = 10
 
+
 def index(request):
     posts = Post.objects.order_by('-pub_date')[:POSTS_PER_PAGE]
     context = {
