@@ -13,16 +13,6 @@ def index(request):
     return render(request, 'posts/index.html', context)
 
 
-def group_list(request, slug):
-    template = 'posts/group_list.html'
-    title = 'Здесь будет информация о группах проекта Yatube'
-    context = {
-        'title': title,
-        'text': 'Группаы проекта Yatube',
-    }
-    return render(request, template, context)
-
-
 def group_posts(request, slug):
     group = get_object_or_404(Group, slug=slug)
     posts = group.posts.all()[:POSTS_PER_PAGE]

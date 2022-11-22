@@ -15,7 +15,8 @@ class Post(models.Model):
         'Group',
         blank=True,
         null=True, on_delete=models.SET_NULL,
-        verbose_name='Сообщество')
+        verbose_name='Сообщество',
+        related_name='posts')
 
     class Meta:
         ordering = ("-pub_date",)
