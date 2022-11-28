@@ -6,7 +6,7 @@
 {% block title %}{{context}}{% endblock title %}
 
 {% block content %}
-  {% for post in posts %}
+  {% for post in page_obj %}
   <ul>
     <li>
       Автор: {{ post.author.get_full_name }}
@@ -20,6 +20,7 @@
     <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
   {% endif %} 
   {% if not forloop.last %}<hr>{% endif %}
-  {% endfor %}  
+  {% endfor %}
+  {% include 'posts/includes/paginator.html' %}
 {% endblock content %}
 {% include 'includes/footer.html' %}
